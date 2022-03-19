@@ -1,9 +1,18 @@
+Problem: Given an integers sequence a=(a1,a2,…,an). A subsequence of a is defined to be ai,ai+1,…,aj. 
+	The weight of a subsequence is the sum of its elements. Find the subsequence having the highest weight.
+
+Input
+Line 1 contains n (1≤n≤106)
+Line 2 contains a1,…,an (−500≤ai≤500)
+Output
+Write the weight of the highest subsequence found.
+
 #include<stdio.h>
 #define N 100001
 int n;
 int a[N];
-int start_index[N];
-int select;
+int start_index[N];// chỉ số bắt đầu lời giải bài toán con i
+int select;// chỉ số của bài toán con lấy làm lời giải
 
 void input () {
 	scanf("%d",&n);
