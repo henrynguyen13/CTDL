@@ -1,3 +1,20 @@
+Problem: A subsequence of a given sequence S=S1,…,Sn is obtained by removing some elements from S. 
+	Given two sequence of integers X=(X1,…,Xn) and Y=(Y1,…,Ym). Find the longest common subsequence of X and Y.
+	
+Input
+Line 1 contains n and m (1≤n,m≤104)
+Line 2 contains X1,…,Xn
+Line 3 contains Y1,…,Ym
+Output
+Write the length of the longest subsequence of the given sequences
+input
+7 10
+3 7 2 5 1 4 9
+4 3 2 3 6 1 5 4 9 7
+output
+9 4 1 2 3 
+5
+
 #include<stdio.h>
 #define N 10001
 
@@ -5,8 +22,7 @@ int x[N];
 int y[N];
 int s[N][N];
 int n,m;
-int trace[N][N]; 
-
+int trace[N][N]; // truy vết từ ngược từ s[n][m]
 void input(){
 	scanf("%d%d",&n,&m);
 	for(int i=1;i<=n;i++){
