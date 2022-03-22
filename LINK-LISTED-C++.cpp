@@ -23,7 +23,7 @@ void printList(Node*h){
 }
 
 Node* addElement(Node* h, int v){
-	//Th�m m?t ph?n t? v�o cu?i listLinker khi bi?t con tr? dang tr? v�o ph?n t? cu?i:
+	//Thêm một phần tử vào cuối listLinker khi biết con trỏ đang trỏ vào phần tử cuối
 	Node*p =makeNode(v);
 	h->next=p;
 	return p;
@@ -84,7 +84,7 @@ Node* remove(Node*h, int v){
 		return h;
 	}
 	Node*p=h;
-	//Luc nay, h !=NULL => p!=NULL => Just xet p->next
+	//Lúc này, h !=NULL => p!=NULL => Ta chỉ cần xét p->next
 	while(p->next!=NULL){
 		if(p->next->value==v){
 			Node*tmp = p->next;
@@ -110,7 +110,7 @@ Node* removeRecursive(Node*h,int v){
 	return h;
 }
 
-//Begin: remove phan tu o chi so k
+//Begin: remove phần tử ở chỉ số k
 Node* removeHead(Node*h){
 	Node*p = h;
 	h=h->next;
@@ -136,7 +136,7 @@ Node* removeAt(Node*h,int k){
 	delete(tmp);
 	return h;
 }
-//End: remove phan tu o chi so k
+//End: remove phần tử ở chỉ số k
 
 
 Node* insertBefore(Node*h,int v,int u){
@@ -345,7 +345,7 @@ int main (){
 //	printList(h);
 
 //	cin >> u;
-//  h = deleteBigger(h,getNode(h,u)->value);
+//  	h = deleteBigger(h,getNode(h,u)->value);
 //	printList(h);
 	return 0;
 	
